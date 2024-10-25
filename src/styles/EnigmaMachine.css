@@ -1,0 +1,207 @@
+/* src/styles/EnigmaMachine.css */
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
+body {
+  background-color: #f0f0f0;
+  font-family: 'Special Elite', cursive;
+}
+
+.enigma-machine {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #4a4a4a;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  color: #ffd700;
+}
+
+h1 {
+  text-align: center;
+  color: #ffd700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: 2.5em;
+}
+
+.mode-indicator {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.2em;
+}
+
+.mode {
+  font-weight: bold;
+  color: #ff6b6b;
+}
+
+.rotor-container {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.rotor, .reflector {
+  background-color: #333;
+  border: 2px solid #ffd700;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.rotor:hover, .reflector:hover {
+  transform: scale(1.05);
+}
+
+.rotor select, .reflector select {
+  background-color: #4a4a4a;
+  color: #ffd700;
+  border: 1px solid #ffd700;
+  padding: 5px;
+  margin-bottom: 10px;
+  font-family: 'Special Elite', cursive;
+}
+
+.rotor-position {
+  font-size: 24px;
+  font-weight: bold;
+  background-color: #ffd700;
+  color: #4a4a4a;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  margin: 0 auto;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.lampboard {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  gap: 5px;
+  margin-bottom: 20px;
+}
+
+.lamp {
+  background-color: #333;
+  border: 1px solid #ffd700;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.lamp.lit {
+  background-color: #ffd700;
+  color: #4a4a4a;
+  box-shadow: 0 0 10px #ffd700;
+  animation: pulse 0.5s;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.keyboard {
+  margin-bottom: 20px;
+}
+
+.keyboard-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+.keyboard button {
+  background-color: #333;
+  border: 1px solid #ffd700;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 0 2px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #ffd700;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  font-family: 'Special Elite', cursive;
+}
+
+.keyboard button:hover {
+  background-color: #4a4a4a;
+  transform: translateY(-2px);
+}
+
+.keyboard button:active {
+  background-color: #ffd700;
+  color: #4a4a4a;
+  transform: translateY(1px);
+}
+
+.plugboard {
+  margin-bottom: 20px;
+}
+
+.plugboard input {
+  width: 100%;
+  padding: 5px;
+  margin-top: 5px;
+  background-color: #333;
+  border: 1px solid #ffd700;
+  color: #ffd700;
+  font-family: 'Special Elite', cursive;
+}
+
+.connections {
+  margin-top: 10px;
+}
+
+.io-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.io-container input {
+  width: 100%;
+  padding: 5px;
+  margin-top: 5px;
+  background-color: #333;
+  border: 1px solid #ffd700;
+  color: #ffd700;
+  font-family: 'Special Elite', cursive;
+}
+
+.io-container label {
+  color: #ffd700;
+  font-weight: bold;
+}
+
+.mode-button {
+  display: block;
+  margin: 20px auto 0;
+  padding: 10px 20px;
+  background-color: #ffd700;
+  color: #4a4a4a;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Special Elite', cursive;
+}
+
+.mode-button:hover {
+  background-color: #ff6b6b;
+  transform: translateY(-2px);
+}
+
+.mode-button:active {
+  transform: translateY(1px);
+}
