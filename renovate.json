@@ -4,5 +4,6 @@
     "config:recommended"
   ],
   "labels": ["dependencies", "renovate"],
-  "dependencyDashboard": true
+  "dependencyDashboard": true,
+  "reviewers": ["MrCodeBS"]
 }
